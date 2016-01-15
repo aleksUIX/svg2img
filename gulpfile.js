@@ -4,7 +4,7 @@ var browserify = require('gulp-browserify');
 
 
 gulp.task('bundle-js', function() {
-  gulp.src('src/index.js')
+  gulp.src('src/App.js')
     .pipe(browserify())
     .pipe(concat('bundle.js'))
     .pipe(gulp.dest('dist'));
