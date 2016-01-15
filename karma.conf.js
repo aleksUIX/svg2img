@@ -6,8 +6,13 @@ module.exports = (config) => {
     frameworks: ['jasmine'],
     browsers: ['Chrome'],
     files: [
-      '../test/specs/*Spec.js'
-    ]
+      '../test/specs/*Spec.js',
+      '../src/*.js',
+    ],
+    preprocessors: {
+      '../test/specs/*Spec.js': ['commonjs'],
+      '../src/*.js': ['commonjs']
+    }
 //    preprocessors: {
 //      'test/**/*.spec.js': ['webpack'],
 //    },
