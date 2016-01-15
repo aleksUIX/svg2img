@@ -23,6 +23,11 @@
     "browserify": "^13.0.0",
     "gulp": "^3.9.0",
     "gulp-browserify": "^0.5.1",
-    "gulp-concat": "^2.6.0"
-  }
+    "gulp-concat": "^2.6.0",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.19",
+    "karma-jasmine": "^0.3.6"
+  },
+  "dependencies": {}
 }
