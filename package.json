@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/aleksUIX/svg2img/issues"
   },
-  "homepage": "https://github.com/aleksUIX/svg2img#readme"
+  "homepage": "https://github.com/aleksUIX/svg2img#readme",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.0"
+  }
 }
