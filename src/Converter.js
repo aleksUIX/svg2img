@@ -1,3 +1,12 @@
+var Rewriter = require('./modules/Rewriter');
+
+
 module.exports = function Converter() {
-    this.converter = true;
+
+  return {
+    convert: function() {
+      new Rewriter(arguments);
+    }
+  }
+
 };
