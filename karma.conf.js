@@ -4,9 +4,10 @@ module.exports = (config) => {
     singleRun: true,
     providers: ['jasmine'],
     frameworks: ['jasmine'],
-    browsers: ['Chrome', 'Fireworks', 'IE'],
+    browsers: ['Chrome', 'Firefox'],
     files: [
-      'test/**/*.spec.js',
+      'src/**/*.js',
+      'test/**/*Spec.js'
     ]
 //    preprocessors: {
 //      'test/**/*.spec.js': ['webpack'],

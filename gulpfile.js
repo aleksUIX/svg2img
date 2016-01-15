@@ -12,11 +12,19 @@ gulp.task('bundle-js', function() {
 });
 
 
+
 gulp.task('test', function (done) {
   new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
   }, done).start();
 });
+
+gulp.task('tdd', function (done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js'
+  }, done).start();
+});
+
 
 gulp.task('default', ['bundle-js']);
