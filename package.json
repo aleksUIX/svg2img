@@ -1,0 +1,22 @@
+{
+  "name": "svg2img",
+  "version": "1.0.0",
+  "description": "Utility to allow exporting SVG to jpg and png in the client",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksUIX/svg2img.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksUIX/svg2img/issues"
+  },
+  "homepage": "https://github.com/aleksUIX/svg2img#readme"
+}
