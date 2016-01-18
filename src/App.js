@@ -1,4 +1,4 @@
-import Converter from './Converter';
+var Converter = require('./Converter');
 
 (function IIFE() {
   if (!window.svg2img) {

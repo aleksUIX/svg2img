@@ -1,18 +1,25 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const browserify = require('browserify');
-const babel = require('babelify');
-const source = require('vinyl-source-stream');
-const Server = require('karma').Server;
+var gulp = require('gulp');
+var concat = require('gulp-concat');
+var browserify = require('browserify');
+var babel = require('babelify');
+var source = require('vinyl-source-stream');
+var Server = require('karma').Server;
 
 
-gulp.task('bundle-js', function() {
+gulp.task('build', function() {
   return browserify({ entries: './src/App.js', extensions: ['.js'], debug: true })
-    .transform(babel)
+    //.transform(babel)
     .bundle()
     .pipe(source('bundle.js'))
     .pipe(gulp.dest('dist'));
 });
+
+gulp.task('watch', ['build'], function () {
+  gulp.watch('src/*.js', ['build']);
+  gulp.watch('src/**/*.js', ['build']);
+});
+
+gulp.task('default', ['watch']);
 
 // gulp.task('test', function (done) {
 //   new Server({
@@ -30,4 +37,4 @@ gulp.task('bundle-js', function() {
 // });
 
 
-gulp.task('default', ['bundle-js']);
+//gulp.task('default', ['bundle-js']);

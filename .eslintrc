@@ -1,5 +1,5 @@
 {
-  "parser": "babel-eslint",
+  "parser": "eslint",
   "extends": "eslint-config-airbnb",
   "env": {
     "browser": true,

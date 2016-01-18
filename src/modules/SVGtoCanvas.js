@@ -1,9 +1,9 @@
-import canvg from '../libs/canvg';
+var canvg = require('../libs/canvg');
 
 
-class SVGtoCanvas {
+function SVGtoCanvas() {
 
 }
 
 
-export default SVGtoCanvas;
+module.exports = SVGtoCanvas;
