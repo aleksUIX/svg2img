@@ -1,13 +1,8 @@
-var Rewriter = require('./modules/Rewriter');
+const Rewriter = require('./modules/Rewriter');
 
 
 module.exports = function Converter() {
-  'use strict';
-
   return {
-    convert: function() {
-      new Rewriter(arguments);
-    }
-  }
-
+    convert: new Rewriter(arguments),
+  };
 };

@@ -1,8 +1,7 @@
-var Converter = require('./Converter');
+const Converter = require('./Converter');
 
-(function() {
-  'use strict';
-
-  if (!window.svg2img)
+(function IIFE() {
+  if (!window.svg2img) {
     window.svg2img = new Converter();
+  }
 })();
