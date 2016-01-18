@@ -1,11 +1,9 @@
-//var rgbcolor = require('../libs/rgbcolor');
-//var stackblur = require('../libs/stackblur');
-var canvg = require('../libs/canvg');
+import canvg from '../libs/canvg';
 
 
-function SVGtoCanvas() {
+class SVGtoCanvas {
 
-};
+}
 
 
-module.exports = SVGtoCanvas;
+export default SVGtoCanvas;

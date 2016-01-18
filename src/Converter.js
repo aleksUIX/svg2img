@@ -1,8 +1,9 @@
-const Rewriter = require('./modules/Rewriter');
+import Rewriter from './modules/Rewriter';
 
+class Converter {
+  constructor() {
+    this.convert = new Rewriter();
+  }
+}
 
-module.exports = function Converter() {
-  return {
-    convert: new Rewriter(arguments),
-  };
-};
+export default Converter;
