@@ -1,17 +1,20 @@
 module.exports = (config) => {
+  'use strict';
   config.set({
     basePath: 'src',
     singleRun: true,
     providers: ['jasmine'],
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'commonjs'],
     browsers: ['Chrome'],
     files: [
       '../test/specs/*Spec.js',
-      '../src/*.js',
+      '/**/*.js',
+      '/*.js',
     ],
     preprocessors: {
       '../test/specs/*Spec.js': ['commonjs'],
-      '../src/*.js': ['commonjs']
+      '/**/*.js': ['commonjs'],
+      '/*.js': ['commonjs']
     }
 //    preprocessors: {
 //      'test/**/*.spec.js': ['webpack'],

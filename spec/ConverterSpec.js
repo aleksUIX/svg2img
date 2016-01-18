@@ -1,5 +1,6 @@
 describe('Converter', function() {
-  var Converter = require('../../src/Converter');
+  'use strict';
+  var Converter = require('../src/Converter');
   var converter;
 
   beforeEach(function() {
@@ -9,5 +10,8 @@ describe('Converter', function() {
   it('should exist', function() {
     expect(typeof converter).toEqual('object');
   });
-
+//
+//  it('should return 2 + 2 = 4', function() {
+//    expect(2 + 2).toEqual(4);
+//  });
 });
