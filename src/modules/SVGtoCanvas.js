@@ -1,12 +1,15 @@
 var canvg = require('../libs/canvg');
-
+var CreateCanvas = require('./CreateCanvas');
 
 function SVGtoCanvas() {
 
   return function(args) {
     var imgData;
+    var canvasCreator = new CreateCanvas();
 
-    console.log(args.svgSrc);
+    canvasCreator.createCanvas(args.svgSrc);
+    var svgSources = canvasCreator.getCanvas();
+    debugger;
     canvg(args.canvasDest, args.svgSrc.innerHTML);
     imgData = args.canvasDest.toDataURL();
 
