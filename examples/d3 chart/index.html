@@ -3,9 +3,20 @@
   </head>
   <body>
     <div id="chart"></div>
+    <button id="exportBtn">export</button>
   </body>
   <script type="text/javascript" src="../../dist/bundle.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/d3.js"></script>
   <script type="text/javascript" src="js/candle.js"></script>
+  <script type="text/javascript">
+    (function() {
+      var btn = document.getElementById('exportBtn');
+      var chart = document.getElementById('chart');
+
+      btn.addEventListener('click', function() {
+        window.svg2img(chart);
+      });
+    })();
+  </script>
 </html>
