@@ -7,8 +7,8 @@ function SVGtoCanvas() {
     var imgData;
     var canvasCreator = new CreateCanvas();
 
-    canvasCreator.createCanvas(args.svgSrc);
-    var svgSources = canvasCreator.getCanvas();
+
+    var svgSources = canvasCreator.createCanvas(args.svgSrc);
 
     debugger;
     canvg(args.canvasDest, args.svgSrc.innerHTML);

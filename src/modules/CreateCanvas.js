@@ -10,6 +10,8 @@ module.exports = function CreateCanvas() {
       $body.appendChild(canvasPartial);
       canvasArray.push(canvasPartial);
     }
+
+    return canvasArray;
   }
 
   function getCanvas() {
