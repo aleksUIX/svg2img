@@ -2,8 +2,8 @@
 
 (function() {
 
-  var width = 900;
-  var height = 500;
+  var width = 500;
+  var height = 300;
    String.prototype.format = function() {
     var formatted = this;
     for (var i = 0; i < arguments.length; i++) {
@@ -114,6 +114,7 @@
     data = data.sort(function(x, y){ return dateFormat.parse(x.Date).getTime() - dateFormat.parse(y.Date).getTime(); });
     buildChart(data);
   }
+  window.appendToData = appendToData;
 
   function buildQuery(){
     var symbol = window.location.hash;
