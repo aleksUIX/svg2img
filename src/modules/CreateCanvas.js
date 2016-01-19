@@ -1,15 +1,14 @@
 module.exports = function CreateCanvas() {
-  var $body = document.getElementsByTagName('body');
+  var $body = document.getElementsByTagName('body')[0];
   var canvasArray = [];
 
   function createCanvas(svg) {
-    svg = svg.tagName === 'svg' ? [svg] : svg.getElementsByTagName('svg');
-    console.log(svg);
-    if (Array.isArray(svg)) {
-      for (var i = 0; i < svg.length; i++) {
-        var canvas = $body.appendChild('canvas');
-        canvasArray.push(canvas);
-      }
+    debugger;
+
+    for (var i = 0; i < svg.length; i++) {
+      var canvasPartial = document.createElement('canvas');
+      $body.appendChild(canvasPartial);
+      canvasArray.push(canvasPartial);
     }
   }
 
