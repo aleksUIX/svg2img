@@ -9,7 +9,6 @@
     </div>
     <button id="exportBtn">export</button>
     <a href="" id="downloadBtn" download="img">download</a>
-    <canvas id="canvasArea"></canvas>
   </body>
   <script type="text/javascript" src="../../dist/bundle.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
@@ -26,7 +25,6 @@
       btn.addEventListener('click', function() {
         window.svg2img({
           svgSrc: chart,
-          canvasDest: canvasArea,
           downBtn: downloadBtn
         });
       });
