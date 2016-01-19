@@ -4,6 +4,7 @@ var browserify = require('browserify');
 var babel = require('babelify');
 var source = require('vinyl-source-stream');
 var Server = require('karma').Server;
+var connect = require('gulp-connect');
 
 
 gulp.task('build', function() {
@@ -11,7 +12,8 @@ gulp.task('build', function() {
     //.transform(babel)
     .bundle()
     .pipe(source('bundle.js'))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(connect.reload());;
 });
 
 gulp.task('watch', ['build'], function () {
@@ -19,7 +21,15 @@ gulp.task('watch', ['build'], function () {
   gulp.watch('src/**/*.js', ['build']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('connect', function() {
+  connect.server({
+    root: './',
+    livereload: true
+  });
+});
+
+
+gulp.task('default', ['connect', 'watch']);
 
 // gulp.task('test', function (done) {
 //   new Server({
