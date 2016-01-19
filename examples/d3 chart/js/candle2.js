@@ -2,7 +2,7 @@
 
 (function() {
 
-  var width = 500;
+  var width = 600;
   var height = 300;
    String.prototype.format = function() {
     var formatted = this;
@@ -27,7 +27,7 @@
 
       var margin = 50;
 
-  var chart = d3.select("#chart")
+  var chart = d3.select("#chart2")
       .append("svg:svg")
       .attr("class", "chart")
       .attr("width", width)
@@ -103,7 +103,7 @@
   }
 
 
-  function appendToData(x){
+  function appendToData2(x){
   if(data.length > 0){
     return;
     }
@@ -114,7 +114,7 @@
     data = data.sort(function(x, y){ return dateFormat.parse(x.Date).getTime() - dateFormat.parse(y.Date).getTime(); });
     buildChart(data);
   }
-  window.appendToData = appendToData;
+  window.appendToData2 = appendToData2;
 
   function buildQuery(){
     var symbol = window.location.hash;
@@ -126,7 +126,7 @@
     var getDateString = d3.time.format("%Y-%m-%d");
     var query = base.format(symbol, getDateString(start), getDateString(end));
     query = encodeURIComponent(query);
-    var url = "http://query.yahooapis.com/v1/public/yql?q={0}&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=appendToData".format(query);
+    var url = "http://query.yahooapis.com/v1/public/yql?q={0}&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=appendToData2".format(query);
     return url;
   }
   function fetchData(){
