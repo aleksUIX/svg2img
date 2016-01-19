@@ -2,7 +2,7 @@ module.exports = function CreateCanvas() {
   var $body = document.getElementsByTagName('body')[0];
   var canvasArray = [];
 
-  function createCanvas(svg) {
+  function create(svg) {
     // wrapper for all canvas elements that will be exported
     var canvasWrapper = document.createElement('div');
 
@@ -25,7 +25,7 @@ module.exports = function CreateCanvas() {
   }
 
   return {
-    createCanvas: createCanvas,
+    create: create,
     getCanvas: getCanvas
   }
 }

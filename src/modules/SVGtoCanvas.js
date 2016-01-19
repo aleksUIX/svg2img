@@ -7,13 +7,14 @@ function SVGtoCanvas() {
     var imgData;
     var canvasCreator = new CreateCanvas();
 
+    //
+    var svgSources = canvasCreator.create(args.svgSrc);
 
-    var svgSources = canvasCreator.createCanvas(args.svgSrc);
-
-    debugger;
     canvg(args.canvasDest, args.svgSrc.innerHTML);
     imgData = args.canvasDest.toDataURL();
 
+
+    // the below needs to be refactored into separate module
     args.downBtn.removeAttribute('disabled');
     args.downBtn.setAttribute('href', imgData);
 
