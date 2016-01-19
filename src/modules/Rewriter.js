@@ -5,5 +5,4 @@ var SVGtoCanvas = require('./SVGtoCanvas');
 
 module.exports = function Rewriter() {
   'use strict';
-  console.log(arguments);
 }
