@@ -4,6 +4,7 @@
   <body>
     <div id="chart"></div>
     <button id="exportBtn">export</button>
+    <canvas id="canvasArea"></canvas>
   </body>
   <script type="text/javascript" src="../../dist/bundle.js"></script>
   <script type="text/javascript" src="js/jquery.js"></script>
@@ -13,9 +14,13 @@
     (function() {
       var btn = document.getElementById('exportBtn');
       var chart = document.getElementById('chart');
+      var canvasArea = document.getElementById('canvasArea');
 
       btn.addEventListener('click', function() {
-        window.svg2img(chart);
+        window.svg2img({
+          svgSrc: chart, 
+          canvasDest: canvasArea
+        });
       });
     })();
   </script>
