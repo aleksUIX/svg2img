@@ -8,6 +8,10 @@ function SVGtoCanvas() {
 
     canvg(args.canvasDest, args.svgSrc.innerHTML);
     imgData = args.canvasDest.toDataURL();
+
+    args.downBtn.removeAttribute('disabled');
+    args.downBtn.setAttribute('href', imgData);
+    
     console.log(imgData);
   }
 }
